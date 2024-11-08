@@ -1,0 +1,232 @@
+body {
+    background-image: url("../Images/Background.jpg");
+    background-color: black;
+    background-size: cover;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+div[class="box"]{
+    width: 100vw; 
+    height: 50px;
+    background-color: black; 
+    text-align: left;
+    display:inline-flex;
+    border:double whitesmoke;
+    padding-top: 10px;
+    padding-left: 0;
+    margin-left:1px;
+}
+div[class="box"] a{
+    font-size: 30px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+div[class="header"] {
+    width: 25%; 
+    height: 50px;
+    background-color: black;
+    border:5px double whitesmoke;
+    border-radius:50px;
+    text-align: center;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+div[class="header"] h1{
+    font-size:30px;        
+    margin: 0 auto;
+    text-align: center;
+    padding-top:2px;
+}
+div[class="header"] img{
+    height: 30px; 
+    width: 30px; 
+    margin:0;
+    display: block;
+    box-shadow: 2px 0 4px 4px white;
+    border:double white;
+    border-width: 5px;
+    border-radius: 50px;
+}
+
+div[class="project"] {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border: 5px double black;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    text-align:center;
+    font-size:30px; 
+    font-family:"Arial"; 
+    display: inline-block;
+    margin:2px;
+}
+h3 {
+    font-size: 30px; 
+    font-family: Arial; 
+    color: black;
+    margin: 10px 0 5px;
+}
+form {
+    width: 100%;
+}
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+form textarea {
+    resize:vertical;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    height: 40px;
+}
+form input[type="submit"]:hover {
+    background-color: #333;
+}
+.box a:hover{
+    color:yellow;
+}
+.phone {
+    display: flex;
+}
+select[id="CountryCode"]{
+    display: flex;
+    width: auto; 
+    height:40px;
+    margin-right: 10px;
+
+}
+/* Media query for screens smaller than 425px */
+@media (max-width: 425px) {
+    body {
+        background-image: url("../Images/Background.jpg");
+        background-color: black;
+    }
+    div[class="box"] {
+        display: none;
+    }
+    div[class="header"] {
+        width: 50%;
+        height: 50px;
+        background-color: black;
+        border: 5px double whitesmoke;
+        border-radius: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    h1 {
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        margin-top: 0;
+        padding-top:5px;
+    }
+    form {
+        padding: 10px;
+    }
+    form input,
+    form textarea {
+        padding: 8px;
+        font-size: 16px;
+    }
+    .phone {
+        display: flex;
+    }
+    select[id="CountryCode"]{
+        display: flex;
+        width: 45px; 
+        height:40px;
+        margin-right: 10px;
+    }
+    /* Additional changes for mobile layout */
+    h3 {
+        font-size: 25px;
+    }
+    .project {
+        padding: 10px;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px;
+        transition: 0.4s;
+    }
+    .menu-icon.active .bar1 {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    .menu-icon.active .bar2 {
+        opacity: 0;
+    }
+    .menu-icon.active .bar3 {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: black;
+        border: 5px double whitesmoke;
+        width: 225px;
+        padding: 10px;
+        z-index: 1;
+    }
+    .menu a {
+        padding: 10px;
+        text-decoration: none;
+        color: whitesmoke;
+        text-align: left;
+        width: 100%;
+        font-size: 20px;
+    }
+    .menu a:hover {
+        background-color: gray;
+    }
+}
+
+@media (min-width: 426px) {
+    .menu {
+        display: none;
+    }
+    /* Hide the menu icon on devices larger than 425px */
+    .menu-icon {
+        display: none;
+    }
+}

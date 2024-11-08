@@ -4,249 +4,15 @@
     <title>About</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style type="text/css">
-        body {
-            background-image: url("../Images/Background.jpg");
-            background-color: black;
-            color: whitesmoke;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        div[class="box"] {
-            width: 100vw; 
-            height: 50px;
-            background-color: black; 
-            text-align: left;
-            display: inline-flex;
-            border:double whitesmoke;
-            padding-top: 10px;
-            padding-left: 0;
-            margin-left: 1px;
-        }
-        div[class="box"] a {
-            font-size: 30px;
-            margin-right: 40px;
-            text-decoration: none;
-            color: whitesmoke;
-        }
-        div[class="header"] {
-            width: 25%; 
-            height: 50px;
-            background-color: black;
-            border: 5px double whitesmoke;
-            border-radius: 50px;
-            text-align: center;
-            margin: 20px auto;
-            padding-top: 10px;
-        }
-        div[class="header"] h1{
-            font-size:30px;        
-            margin: 0 auto;
-            text-align: center;
-            padding-top:2px;
-        }
-        img {
-            height: 30px; 
-            width: 30px; 
-            margin: 0;
-            display: block;
-            box-shadow: 2px 0 4px 4px white;
-            border: double white;
-            border-width: 5px;
-            border-radius: 50px;
-        }
-        h1 {
-            font-size: 30px; 
-            color: white;
-            text-align: center;
-            margin-top: 0;
-        }
-        div[class="project"] {
-            text-align: center;
-            margin: 20px;
-            word-wrap: break-word;
-            font-size: larger;
-        }
-        ul {
-            list-style-type: disc;
-            list-style-position: inside;
-            padding-left: 0; 
-        }
-        div[class="project"] ol,
-        ul {
-            list-style-position: inside;
-            padding-left: 0;
-            text-align: center;
-        }
-        li {
-            margin-left: 0; 
-            padding-left: 5px; 
-        }
-        p {
-            white-space: pre-wrap; 
-            margin: 0; 
-        }
-        h2 {
-            text-align: center;
-            font-size: 25px;
-            text-decoration: underline white;
-        }
-        div[class="project"] b {
-            text-decoration: underline cyan;
-        }
-        ol a {
-            display: inline-flex;
-            background-color: black;
-            color: white;
-            text-decoration:none;
-            border: 2px solid whitesmoke;
-            font-size:18px;
-            width: 100px;
-            height: auto;
-            text-align: center;
-            padding-left: 20px;
-            padding-top: 3px;
-            padding-bottom: 3px;
-        }
-        p a {
-            display: inline-flex;
-            background-color: none;
-            color: cyan;
-            border: none;
-            width: 50px;
-            height: auto;
-            text-align: center;
-            text-decoration: underline white;
-            font-size: larger;
-            margin: 0;
-            padding-right: 25px;
-        }
-        .box a:hover {
-            color: yellow;
-        }
-        @media (max-width: 425px) {
-            body {
-                background-image: url("../Images/Background.jpg");
-                background-color: black;
-            }
-            div[class="box"] {
-                display: none;
-            }
-            div[class="header"] {
-                width: 40%;
-                height: 50px;
-                background-color: black;
-                border: 5px double whitesmoke;
-                border-radius: 50px;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 20px;
-            }
-            h1 {
-                font-size: 35px;
-                color: white;
-                text-align: center;
-                margin-top: 0;
-            }
-            p {
-                white-space: pre-wrap;
-                margin: 0 auto;
-                text-align: center;
-            }
-            img {
-                height: 10px;
-                width: 10px;
-                border: double white;
-                box-shadow: none;
-                margin: none;
-                border-width: 2px;
-                border-radius: 20px;
-            }
-            div[class="project"] {
-                text-align: center;
-                margin: 0 auto;
-                word-wrap: break-word;
-                font-size: larger;
-            }
-            div[class="project"] b {
-                text-decoration: underline cyan;
-            }
-            h2 {
-                text-align: center;
-                font-size: 30px;
-                text-decoration: underline white;
-            }
-            ul,
-            ol {
-                list-style-position: inside;
-                text-align: center;
-            }
-            /* Hamburger menu styles */
-            .menu-icon {
-                display: block;
-                cursor: pointer;
-                position: absolute;
-                top: 10px;
-                right: 10px;
-            }
-            .menu-icon div {
-                width: 25px;
-                height: 3px;
-                background-color: white;
-                margin: 4px;
-                transition: 0.4s;
-            }
-            .menu-icon.active .bar1 {
-                transform: rotate(-45deg) translate(-5px, 5px);
-            }
-            .menu-icon.active .bar2 {
-                opacity: 0;
-            }
-            .menu-icon.active .bar3 {
-                transform: rotate(45deg) translate(-5px, -5px);
-            }
-            .menu {
-                display: none;
-                flex-direction: column;
-                align-items: flex-start;
-                position: absolute;
-                top: 50px;
-                right: 10px;
-                background-color: black;
-                border: 5px double whitesmoke;
-                width: 225px;
-                padding: 10px;
-                z-index: 1;
-            }
-            .menu a {
-                padding: 10px;
-                text-decoration: none;
-                color: whitesmoke;
-                text-align: left;
-                width: 100%;
-                font-size:30px;
-            }
-            .menu a:hover {
-                background-color: gray;
-            }
-        }
-
-        @media (min-width: 426px) {
-            .menu {
-                display: none;
-            }
-            /* Hide the menu icon on devices larger than 425px */
-            .menu-icon {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" href="/Images/icon.png" type="image/x-icon">
+    <script src="base.js"></script>
 </head>
 <body>
     <div class="box">
-        <a style="margin-left:60px;" href="javascript:history.back()">
+        <a style="margin-left:60px;" class="back" href="javascript:history.back()">
             <img src="../Images/Back Arrow.png">
         </a>
         <h1><a href="Angad's Portfolio.html">Home</a></h1>
@@ -254,6 +20,8 @@
         <h1><a href="Achievements.html">Achievements</a></h1>
         <h1><a href="About.html">About</a></h1>
         <h1><a href="Contact Us.html">Contact Us</a></h1>
+        <img src="/Images/dark theme.png" alt="Dark Theme" class="theme-toggle" id="dark-theme">
+        <img src="/Images/light theme.png" alt="Light Theme" class="theme-toggle hidden" id="light-theme">
     </div>
 
     <div class="header">
@@ -344,45 +112,8 @@ I am eager to continue my journey of exploration and innovation, leveraging my s
                 <li>Songs (English, Hindi)</li>
             </ul>
         </p>
-
-        <h2>Contact Information</h2>
-        <p style="padding-left:20px;"> You can reach out to me <a href="Contact Us.html">here</a> <br><br> or connect with me on-
-        <ol type="1">
-            <li><a href="https://www.instagram.com/angad_deep_1596/">Instagram</a></li>
-            <br>
-            <li><a href="https://www.youtube.com/@CodingOurRequirement">YouTube</a></li>
-            <br>
-            <li><a href="https://www.facebook.com/LearnWithAngad">Facebook</a></li>
-        </ol>
-        </p>
     </div>
+    <footer id="footer"></footer>
 
-    <!-- Hamburger Menu for Mobile -->
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </div>
-    <div class="menu" id="menu">
-        <a href="Angad's Portfolio.html">Home</a><br><hr><br>
-        <a href="Projects.html">Projects</a><br><hr><br>
-        <a href="Achievements.html">Achievements</a><br><hr><br>
-        <a href="About.html">About</a><br><hr><br>
-        <a href="Contact Us.html">Contact Us</a><br>
-    </div>
-
-    <script type="text/javascript">
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            var icon = document.querySelector(".menu-icon");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-                icon.classList.remove("active");
-            } else {
-                menu.style.display = "block";
-                icon.classList.add("active");
-            }
-        }
-    </script>
 </body>
 </html>
