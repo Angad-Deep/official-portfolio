@@ -1,4 +1,7 @@
-
+.home, .projects-page, .achievements-page, .about-page, .contact-page{
+    display: inline-block; 
+    margin: 0;
+}
 section[class="intro"] {
     padding: 20px;
     text-align: center;
