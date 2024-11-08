@@ -1,7 +1,7 @@
 footer{
     height:57vh;
     width: 100vw !important;
-    background-image:url("/Images/footer.png");
+    background-image:url("../Images/footer.png");
     display:flex;
     margin:0 0 -6px 0;
     flex-direction:column;
