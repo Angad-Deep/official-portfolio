@@ -104,6 +104,9 @@ p:not(footer p) a {
     filter: blur(8px); /* Creates the shadow effect */
 }
 
+#personal-interests ul{
+    margin-top:-2vh;
+}
 @media (max-width: 425px) {
     body {
         background-image: url("../Images/Background.jpg");
