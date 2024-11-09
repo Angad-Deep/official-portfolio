@@ -39,7 +39,7 @@ h1 {
     background-color: rgb(0, 204, 51);
 }
 .header a:hover{
-    color:rgb(0, 255, 0) !important;
+    color:rgb(0, 255, 0);
 }
 
 /* Media query for screens smaller than 425px */

@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const achievements = document.querySelector('.achievements');
     const project = document.querySelectorAll('.project');
     const hlinks = document.querySelectorAll('.header a');
+    const ec = document.querySelectorAll('.section');
+    const ecAct = document.querySelectorAll('.activity b');
+
+
 
     function applyTheme() {
         if (theme === 'dark') {
@@ -106,16 +110,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
             hlinks.forEach(hlinks => {
                 hlinks.style.color = "";
+                hlinks.style.backgroundImage = ""; // Clear background on load
+                hlinks.style.backgroundClip = ""; // Clear clip on load
+                hlinks.style.webkitBackgroundClip = ""; // Clear clip on load
+                hlinks.style.color = ""; 
                 hlinks.addEventListener('mouseenter', () => {
-                    hlinks.style.color = "rgb(255,255,0)";
+                    hlinks.style.backgroundImage = "linear-gradient(135deg, #00f260, #00ffee)";
+                    hlinks.style.webkitBackgroundClip = "text";
+                    hlinks.style.color = "transparent";
                 });
                 hlinks.addEventListener('mouseleave', () => {
+                    hlinks.style.backgroundImage = "";
                     hlinks.style.color = "";
                 });  
             });
 
             boldElements.forEach(b => {
                 b.style.color = 'ghostwhite';
+            });
+
+            ec.forEach(ec => {
+                ec.style.backgroundColor = "black";
+                ec.style.boxShadow = "2px 3px 10px 6px";
+                ec.classList.remove('gradient-shadow');
+                ec.classList.add('gradient-shadow');
             });
 
             project.forEach(project => {
@@ -132,9 +150,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (darkThemeImg) darkThemeImg.classList.remove('hidden');
             if (lightThemeImg) lightThemeImg.classList.add('hidden');
         } else {
-            document.body.style.backgroundColor = 'whitesmoke';
+            document.body.style.background = "linear-gradient(135deg, #00f260, #00ffee, #fcff5f)";
             document.body.style.color = 'black';
-            document.body.style.backgroundImage = 'none';
 
             if (header) {
                 header.style.backgroundColor = 'white';
@@ -174,18 +191,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 h2.style.textUnderlineOffset = '5px';
             });
 
-            hlinks.forEach(hlinks => {
-                hlinks.style.color = "rgb(0,0,0)";
-                hlinks.addEventListener('mouseenter', () => {
-                    hlinks.style.color = "rgb(0,196,196)";
+            hlinks.forEach(hlink => {
+                hlink.style.color = "black"; // Initial color
+                hlink.style.backgroundImage = ""; // Clear background on load
+                hlink.style.backgroundClip = ""; // Clear clip on load
+                hlink.style.webkitBackgroundClip = ""; // Clear clip on load
+            
+                hlink.addEventListener('mouseenter', () => {
+                    hlink.style.backgroundImage = "linear-gradient(135deg, #12c2e9, #c471ed, #f64f59)";
+                    hlink.style.webkitBackgroundClip = "text";
+                    hlink.style.color = "transparent";
                 });
-                hlinks.addEventListener('mouseleave', () => {
-                    hlinks.style.color = "rgb(0,0,0)";
-                });  
+            
+                hlink.addEventListener('mouseleave', () => {
+                    hlink.style.backgroundImage = ""; // Remove gradient on mouse leave
+                    hlink.style.color = "black"; // Revert to original color
+                });
             });
+            
 
             boldElements.forEach(b => {
                 b.style.color = 'black';
+            });
+
+            ec.forEach(ec => {
+                ec.style.backgroundColor = "";
+                ec.style.boxShadow = "";
+                ec.classList.add('gradient-shadow');
             });
 
             project.forEach(project => {

@@ -7,7 +7,7 @@ h1 {
 
 #introduction, #academic-background, #extracurricular-activities, #skills, #projects, #awards-and-honors, #personal-interests {
     text-align: left;
-    margin: 20px auto;
+    margin: 5vh auto 10vh auto;
     border:2px solid black;
     word-wrap: break-word;
     font-size: larger;
@@ -15,6 +15,7 @@ h1 {
     height:fit-content;
     border-radius:2vw;
     padding:1vh 2vw;
+    background-color: white;;
 }
 
 ul {
@@ -83,6 +84,24 @@ p:not(footer p) a {
 
 .header a:hover {
     color: yellow;
+}
+
+.gradient-shadow {
+    position: relative;
+    z-index: 1; /* Ensures the main content stays above the shadow */
+}
+
+.gradient-shadow::before {
+    content: "";
+    position: absolute;
+    top: -10px;    /* Adjust size for shadow effect */
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    z-index: -1;
+    border-radius: inherit; /* Matches the border-radius of the element */
+    opacity: 0.7; /* Optional: adjusts the intensity of the shadow */
+    filter: blur(8px); /* Creates the shadow effect */
 }
 
 @media (max-width: 425px) {
