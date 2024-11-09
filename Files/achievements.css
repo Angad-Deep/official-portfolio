@@ -1,48 +1,5 @@
-body {
-    background-image: url("../Images/Background.jpg");
-    background-color: black;
-    background-size: cover;
-    color: whitesmoke;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-div[class="box"]{
-    width: 100vw; 
-    height: 50px;
-    background-color: black; 
-    text-align: left;
-    display:inline-flex;
-    border:double whitesmoke;
-    padding-top: 10px;
-    padding-left: 0;
-    margin-left:1px;
-}
-div[class="box"] a{
-    font-size: 30px;
-    margin-right: 40px; 
-    text-decoration: none;
-    color: whitesmoke;
-}
-div[class="box"] a:hover{
+.header a:hover{
     color: yellow;
-}
-div[class="header"] {
-    width: 25%; 
-    height: 50px;
-    background-color: black;
-    border:5px double whitesmoke;
-    border-radius:50px;
-    text-align: center;
-    margin: 20px auto;
-    padding-top: 10px;
-    padding-left:5px;
-}
-div[class="header"] h1{
-    font-size:30px;        
-    margin: 0 auto;
-    text-align: center;
-    padding-top:2px;
 }
 h1 {
     font-size: 30px; 

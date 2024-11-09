@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    let theme = 'dark'; // Initialize theme as 'dark'
+    let theme = 'light'; // Initialize theme as 'dark'
     const darkThemeImg = document.getElementById('dark-theme');
     const lightThemeImg = document.getElementById('light-theme');
-    const header = document.querySelector('.box');
-    const line = document.querySelector('.header');
+    const header = document.querySelector('.header');
+    const line = document.querySelector('.pg-title');
     const footer = document.querySelector('footer');
     const links = document.querySelectorAll('a');
     const headings = document.querySelectorAll('h2');
@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const btns = document.querySelectorAll('.button'); // Ensure this selects all buttons
     const my = document.querySelector('.me');
     const achievements = document.querySelector('.achievements');
+    const project = document.querySelectorAll('.project');
+    const hlinks = document.querySelectorAll('.header a');
 
     function applyTheme() {
         if (theme === 'dark') {
@@ -83,7 +85,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.style.borderColor = 'white'; // Change border color to white for dark theme
             });
 
-            if (my) my.style.borderColor = 'white';
+            if (my) {
+                my.style.borderColor = 'white';
+                my.style.boxShadow = '2px 3px 4px 5px rgb(251, 255, 0)';
+            }
             if (achievements) achievements.style.borderColor = 'white';
             if (achievements) achievements.style.backgroundColor = 'black';
             if (achievements) achievements.style.color = 'white';
@@ -98,8 +103,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 h2.style.textUnderlineOffset = '5px';
             });
 
+            hlinks.forEach(hlinks => {
+                hlinks.style.color = "";
+                hlinks.addEventListener('mouseenter', () => {
+                    hlinks.style.color = "rgb(255,255,0)";
+                });
+                hlinks.addEventListener('mouseleave', () => {
+                    hlinks.style.color = "";
+                });  
+            });
+
             boldElements.forEach(b => {
                 b.style.color = 'ghostwhite';
+            });
+
+            project.forEach(project => {
+                project.style.backgroundColor = "ghostwhite";
+                project.style.filter = "brightness(80%)";
+                project.addEventListener('mouseenter', () => {
+                    project.style.filter = "brightness(90%)";
+                });
+                project.addEventListener('mouseleave', () => {
+                    project.style.filter = "brightness(80%)";
+                });            
             });
 
             if (darkThemeImg) darkThemeImg.classList.remove('hidden');
@@ -129,7 +155,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.style.borderColor = 'black'; // Change border color to black for light theme
             });
 
-            if (my) my.style.borderColor = 'black';
+            if (my) {
+                my.style.borderColor = 'black';
+                my.style.boxShadow = '2px 3px 4px 5px rgba(0, 204, 204, 0.4)';
+            }
             if (achievements) achievements.style.borderColor = 'black';
             if (achievements) achievements.style.backgroundColor = 'white';
             if (achievements) achievements.style.color = 'black';
@@ -144,8 +173,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 h2.style.textUnderlineOffset = '5px';
             });
 
+            hlinks.forEach(hlinks => {
+                hlinks.style.color = "rgb(0,0,0)";
+                hlinks.addEventListener('mouseenter', () => {
+                    hlinks.style.color = "rgb(0,196,196)";
+                });
+                hlinks.addEventListener('mouseleave', () => {
+                    hlinks.style.color = "rgb(0,0,0)";
+                });  
+            });
+
             boldElements.forEach(b => {
                 b.style.color = 'black';
+            });
+
+            project.forEach(project => {
+                project.style.backgroundColor = "";
+                project.style.filter = "";
+                project.addEventListener('mouseenter', () => {
+                    project.style.filter = "";
+                });
+                project.addEventListener('mouseleave', () => {
+                    project.style.filter = "";
+                });            
             });
 
             if (lightThemeImg) lightThemeImg.classList.remove('hidden');

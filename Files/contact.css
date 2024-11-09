@@ -1,57 +1,4 @@
-body {
-    background-image: url("../Images/Background.jpg");
-    background-color: black;
-    background-size: cover;
-    color: whitesmoke;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-div[class="box"]{
-    width: 100vw; 
-    height: 50px;
-    background-color: black; 
-    text-align: left;
-    display:inline-flex;
-    border:double whitesmoke;
-    padding-top: 10px;
-    padding-left: 0;
-    margin-left:1px;
-}
-div[class="box"] a{
-    font-size: 30px;
-    margin-right: 40px;
-    text-decoration: none;
-    color: whitesmoke;
-}
-div[class="header"] {
-    width: 25%; 
-    height: 50px;
-    background-color: black;
-    border:5px double whitesmoke;
-    border-radius:50px;
-    text-align: center;
-    margin: 20px auto;
-    padding-top: 10px;
-}
-div[class="header"] h1{
-    font-size:30px;        
-    margin: 0 auto;
-    text-align: center;
-    padding-top:2px;
-}
-div[class="header"] img{
-    height: 30px; 
-    width: 30px; 
-    margin:0;
-    display: block;
-    box-shadow: 2px 0 4px 4px white;
-    border:double white;
-    border-width: 5px;
-    border-radius: 50px;
-}
-
-div[class="project"] {
+.contact-form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -107,13 +54,10 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #333;
 }
-.box a:hover{
-    color:yellow;
-}
 .phone {
     display: flex;
 }
-select[id="CountryCode"]{
+#CountryCode {
     display: flex;
     width: auto; 
     height:40px;
@@ -169,7 +113,7 @@ select[id="CountryCode"]{
     h3 {
         font-size: 25px;
     }
-    .project {
+    .contact-form {
         padding: 10px;
     }
     .menu-icon {

@@ -11,22 +11,19 @@
     <script src="base.js"></script>
 </head>
 <body>
-    <div class="box">
-        <a style="margin-left:60px;" class="back" href="javascript:history.back()">
-            <img src="../Images/Back Arrow.png" alt="Back">
-        </a>
-        <h1 class="home"><a href="Building-Future-Tech.html">Home</a></h1>
-        <h1 class="projects-page"><a href="Projects.html">Projects</a></h1>
-        <h1 class="achievements-page"><a href="Achievements.html">Achievements</a></h1>
-        <h1 class="about-page"><a href="About.html">About</a></h1>
-        <h1 class="contact-page"><a href="Contact Us.html">Contact Us</a></h1>
+    <div class="header">
         <img src="../Images/dark theme.png" alt="Dark Theme" class="theme-toggle" id="dark-theme">
         <img src="../Images/light theme.png" alt="Light Theme" class="theme-toggle hidden" id="light-theme">
+        <a href="Building-Future-Tech.html" class="home">Home</a>
+        <a href="About.html" class="about-page">About</a>
+        <a href="Projects.html" class="projects-page">Projects</a>
+        <a href="Achievements.html" class="achievements-page">Achievements</a>
+        <a href="Contact Us.html" class="contact-page">Contact Us</a>
     </div>
-    <div class="header">
+    <div class="pg-title">
         <h1>Contact Us</h1>
     </div>
-    <div class="project">
+    <div class="contact-form">
         <form action="mailto:angad.professional1@gmail.com" method="post" enctype="text/plain">
             <h3><label for="Name">Name*</label></h3>
             <input style="height:40px;" type="text" id="Name" name="Name" placeholder="Enter your Name" required autocomplete="name">

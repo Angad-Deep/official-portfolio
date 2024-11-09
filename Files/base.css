@@ -9,13 +9,31 @@ body {
     --text-color: initial;
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 60px;
+}
+.header {
+    width: 99%; 
+    height: 50px;
+    background-color: inherit;
+    text-align: right;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-top:-60px;
+    position: fixed;
+    z-index:1000;
+    box-shadow: 2px 3px 50px 6px rgba(0, 0, 0, 0.1) !important;
+}
+.header a {
+    font-size: 30px;
+    margin-right: 50px; 
+    color: whitesmoke;
 }
 #dark-theme, #light-theme{
     width:4vw;
-    margin:1vh 1vw 0 94vw;
+    margin:1vh 1vw !important;
 }
 .theme-toggle {
     cursor: pointer;
@@ -26,14 +44,16 @@ body {
 .hidden {
     display: none;
 }
-
-.box {
-    position: relative;
+.home, .projects-page, .achievements-page, .about-page, .contact-page{
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 2vw !important;
+    text-decoration:none;
 }
 .button{
-    border: solid whitesmoke; 
+    border: solid whitesmoke !important; 
     border-width: medium; 
-    border-radius: 5px;
+    border-radius: 1vw;
     display: block; 
     text-align:center !important; 
     height:fit-content; 
@@ -46,28 +66,17 @@ body {
     font-size:2vw; 
     color: black !important;
 }
-
-.back img {
-    height: 30px; 
-    width: 30px; 
-    margin:0;
-    display: block;
-    box-shadow: 2px 0 4px 4px white;
-    border:double white;
-    border-width: 5px;
-    border-radius: 50px;
-}
-.header {
+.pg-title {
     width: 25%; 
     height: 50px;
-    border:5px double whitesmoke;
-    border-radius:50px;
+    background-color: black;
+    border: 5px double whitesmoke;
+    border-radius: 50px;
     text-align: center;
     margin: 20px auto;
     padding-top: 10px;
-    padding-left: 10px;
 }
-div[class="header"] h1{
+.pg-title h1{
     font-size:30px;        
     margin: 0 auto;
     text-align: center;

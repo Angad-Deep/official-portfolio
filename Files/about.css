@@ -1,90 +1,64 @@
-body {
-    background-image: url("../Images/Background.jpg");
-    background-color: black;
-    color: whitesmoke;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-div[class="box"] {
-    width: 100vw; 
-    height: 50px;
-    background-color: black; 
-    text-align: left;
-    display: inline-flex;
-    border:double whitesmoke;
-    padding-top: 10px;
-    padding-left: 0;
-    margin-left: 1px;
-}
-div[class="box"] a {
-    font-size: 30px;
-    margin-right: 40px;
-    text-decoration: none;
-    color: whitesmoke;
-}
-div[class="header"] {
-    width: 25%; 
-    height: 50px;
-    background-color: black;
-    border: 5px double whitesmoke;
-    border-radius: 50px;
-    text-align: center;
-    margin: 20px auto;
-    padding-top: 10px;
-}
-div[class="header"] h1{
-    font-size:30px;        
-    margin: 0 auto;
-    text-align: center;
-    padding-top:2px;
-}
 h1 {
     font-size: 30px; 
     color: white;
     text-align: center;
     margin-top: 0;
 }
-div[class="project"] {
-    text-align: center;
-    margin: 20px;
+
+#introduction, #academic-background, #extracurricular-activities, #skills, #projects, #awards-and-honors, #personal-interests {
+    text-align: left;
+    margin: 20px auto;
+    border:2px solid black;
     word-wrap: break-word;
     font-size: larger;
+    width:90vw;
+    height:fit-content;
+    border-radius:2vw;
+    padding:1vh 2vw;
 }
+
 ul {
     list-style-type: disc;
     list-style-position: inside;
     padding-left: 0; 
 }
-div[class="project"] ol,
-ul {
+
+.introduction ul,
+.academic-background ul,
+.extracurricular-activities ul,
+.skills ul,
+.awards ul {
     list-style-position: inside;
     padding-left: 0;
-    text-align: center;
 }
+
 li {
     margin-left: 0; 
     padding-left: 5px; 
 }
+
 p:not(footer p) {
     white-space: pre-wrap; 
     margin: 0; 
 }
+
 h2:not(footer h2) {
     text-align: center;
     font-size: 25px;
     text-decoration: underline white;
 }
-div[class="project"] b {
-    text-decoration: underline cyan;
+
+.introduction b, .extracurricular-activities b {
+    text-decoration: underline;
 }
-ol a {
+
+.projects a {
     display: inline-flex;
     background-color: black;
     color: white;
-    text-decoration:none;
+    text-decoration: none;
     border: 2px solid whitesmoke;
-    font-size:18px;
+    font-size: 18px;
     width: 100px;
     height: auto;
     text-align: center;
@@ -92,6 +66,7 @@ ol a {
     padding-top: 3px;
     padding-bottom: 3px;
 }
+
 p:not(footer p) a {
     display: inline-flex;
     background-color: none;
@@ -105,18 +80,20 @@ p:not(footer p) a {
     margin: 0;
     padding-right: 25px;
 }
-.box a:hover {
+
+.header a:hover {
     color: yellow;
 }
+
 @media (max-width: 425px) {
     body {
         background-image: url("../Images/Background.jpg");
         background-color: black;
     }
-    div[class="box"] {
+    .header {
         display: none;
     }
-    div[class="header"] {
+    .pg-title {
         width: 40%;
         height: 50px;
         background-color: black;
