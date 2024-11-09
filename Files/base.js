@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    let theme = 'light'; // Initialize theme as 'dark'
+    let theme = localStorage.getItem('theme') || 'light'; // Initial/Preserved Theme
+    
     const darkThemeImg = document.getElementById('dark-theme');
     const lightThemeImg = document.getElementById('light-theme');
     const header = document.querySelector('.header');
@@ -208,6 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (darkThemeImg) {
         darkThemeImg.addEventListener('click', function () {
             theme = 'light'; // Switch to light theme
+            localStorage.setItem('theme', theme); // Save theme to localStorage
             applyTheme();
         });
     }
@@ -215,8 +217,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (lightThemeImg) {
         lightThemeImg.addEventListener('click', function () {
             theme = 'dark'; // Switch to dark theme
+            localStorage.setItem('theme', theme); // Save theme to localStorage
             applyTheme();
         });
     }
 });
-
