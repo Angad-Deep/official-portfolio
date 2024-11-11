@@ -64,8 +64,11 @@ form input[type="submit"]:hover {
     margin-right: 10px;
 
 }
-/* Media query for screens smaller than 425px */
+/* Media query for screens smaller than 749px */
 @media (min-width:320px) and (max-width:749px) {
+    .contact-form{
+        width:90vw;
+    }
     form {
         padding: 10px;
     }
@@ -79,9 +82,12 @@ form input[type="submit"]:hover {
     }
     select[id="CountryCode"]{
         display: flex;
-        width: 45px; 
+        width: 25vw !important; 
         height:40px;
-        margin-right: 10px;
+        margin-left: 1px;
+    }
+    .pg-title h1{
+        color:black;
     }
     /* Additional changes for mobile layout */
     h3 {

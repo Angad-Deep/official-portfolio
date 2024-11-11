@@ -48,27 +48,8 @@ h1 {
         background-image: url("../Images/Background.jpg");
         background-color: black;
     }
-    div[class="box"] {
+    .header {
         display: none;
-    }
-    div[class="header"] {
-        width: 50%;
-        height: 50px;
-        background-color: black;
-        border: 5px double whitesmoke;
-        border-radius: 50px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        padding-top: 10px;
-    }
-    h1 {
-        font-size: 25px;
-        color: white;
-        text-align: center;
-        margin-top: 0;
-        padding-top:5px;
     }
     .my-projects {
         padding: 10px;
@@ -86,55 +67,7 @@ h1 {
     }
 }
 
-/* Hamburger menu styles */
-.menu-icon {
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-.menu-icon div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px;
-    transition: 0.4s;
-}
-.menu-icon.active .bar1 {
-    transform: rotate(-45deg) translate(-5px, 5px);
-}
-.menu-icon.active .bar2 {
-    opacity: 0;
-}
-.menu-icon.active .bar3 {
-    transform: rotate(45deg) translate(-5px, -5px);
-}
-.menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background-color: black;
-    border: 5px double whitesmoke;
-    width: 225px;
-    padding: 10px;
-    z-index: 1;
-}
-.menu a {
-    padding: 10px;
-    text-decoration: none;
-    color: whitesmoke;
-    text-align: left;
-    width: 100%;
-    font-size: 20px;
-}
-.menu a:hover {
-    background-color: gray;
-}
-@media (min-width: 426px) {
+@media (min-width: 749px) {
     .menu {
         display: none;
     }
