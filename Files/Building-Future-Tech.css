@@ -111,13 +111,6 @@ div.menu-icon {
 }
 /* Media query for screens smaller than 425px */
 @media (max-width: 850px) {
-    body {
-        background-image: url("../Images/Background.jpg");
-        background-color: black;
-    }
-    div[class="box"] {
-        display: none;
-    }
     h1 {
         font-size: 25px;
         text-align: center;
@@ -127,14 +120,33 @@ div.menu-icon {
     .projects {
         padding: 10px;
     }
-    div[class="project"] {
+    .project {
         margin: 20px 10px;
+        width:90vw;
+        height:70vh;
+    }
+    .project p{
+        width:80vw;
+        margin: 4vh auto;
+    }
+    .w-button, .t-button{
+        width:30vw;
+        border-radius:2vw;
+        padding-bottom:1vh;
+        margin:-2vh auto -1vh auto;
+    }
+    .w-button{
+        height:4vh;
+        padding-bottom:0 !important;
+    }
+    .w-button a, .t-button a{
+        font-size:5.2vw;
     }
     div.menu-icon {
     display: block;
 }
     @media (max-width: 550px){
-    div[class="project"] a img {
+    .project a img {
         height: auto; 
         width: 70%; 
         margin-top: 0; 
@@ -145,7 +157,7 @@ div.menu-icon {
     }
 }
 @media (min-width: 550px){
-    div[class="project"] a img {
+    .project a img {
         height: auto; 
         width: 40%; 
         margin-top: 0; 

@@ -107,31 +107,7 @@ p:not(footer p) a {
 #personal-interests ul{
     margin-top:-2vh;
 }
-@media (max-width: 425px) {
-    body {
-        background-image: url("../Images/Background.jpg");
-        background-color: black;
-    }
-    .header {
-        display: none;
-    }
-    .pg-title {
-        width: 40%;
-        height: 50px;
-        background-color: black;
-        border: 5px double whitesmoke;
-        border-radius: 50px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-    }
-    h1 {
-        font-size: 35px;
-        color: white;
-        text-align: center;
-        margin-top: 0;
-    }
+@media (min-width:320px) and (max-width:749px) {
     p {
         white-space: pre-wrap;
         margin: 0 auto;
@@ -146,13 +122,13 @@ p:not(footer p) a {
         border-width: 2px;
         border-radius: 20px;
     }
-    div[class="project"] {
+    .project {
         text-align: center;
         margin: 0 auto;
         word-wrap: break-word;
         font-size: larger;
     }
-    div[class="project"] b {
+    .project b {
         text-decoration: underline cyan;
     }
     h2 {
@@ -212,15 +188,5 @@ p:not(footer p) a {
     }
     .menu a:hover {
         background-color: gray;
-    }
-}
-
-@media (min-width: 426px) {
-    .menu {
-        display: none;
-    }
-    /* Hide the menu icon on devices larger than 425px */
-    .menu-icon {
-        display: none;
     }
 }
