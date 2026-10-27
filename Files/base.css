@@ -22,23 +22,6 @@ body {
     clip: rect(1px, 1px, 1px, 1px); 
     white-space: nowrap;
 }
-.header {
-    width: 99%; 
-    height: 50px;
-    background-color: inherit;
-    text-align: right;
-    padding-top: 10px;
-    padding-left: 20px;
-    margin-top:-60px;
-    position: fixed;
-    z-index:1000;
-    box-shadow: 2px 3px 20px 6px rgba(0, 0, 0, 0.1) !important;
-}
-.header a {
-    font-size: 30px;
-    margin-right: 50px; 
-    color: whitesmoke;
-}
 #dark-theme, #light-theme{
     width:4vw;
     margin:1vh 1vw !important;
@@ -82,13 +65,16 @@ body {
     border-radius: 50px;
     text-align: center;
     margin: 20px auto;
-    padding-top: 10px;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .pg-title h1{
-    font-size:30px;        
+    font-size:30px;       
     margin: 0 auto;
     text-align: center;
-    padding-top:2px;
+    padding-top:0;
 }
 @media (min-width:50px) and (max-width:749px) {
     body {
