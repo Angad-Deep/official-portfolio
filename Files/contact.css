@@ -87,7 +87,10 @@ form input[type="submit"]:hover {
         margin-left: 1px;
     }
     .pg-title h1{
-        color:black;
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        margin-top: 0;
     }
     /* Additional changes for mobile layout */
     h3 {

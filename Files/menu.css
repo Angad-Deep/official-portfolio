@@ -52,3 +52,12 @@
 .menu a:hover {
     background-color: gray;
 }
+@media (min-width: 426px) {
+    .menu {
+        display: none;
+    }
+    /* Hide the menu icon on devices larger than 425px */
+    .menu-icon {
+        display: none;
+    }
+}

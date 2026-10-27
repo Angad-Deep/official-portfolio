@@ -226,6 +226,9 @@ footer{
         height:auto;
         margin-left:4vw;
     }
+    .instagram, .linkedin, .facebook, .yt{
+        margin-right: 5%;
+    }
     .hr{
         border-top-color: rgb(61, 60, 60);
         border-top-width: 1px;
@@ -240,6 +243,9 @@ footer{
     .middle{
         margin-top:7vh;
     }
+    .left{
+        margin-left: 22.5% !important;
+    }
     .left, .middle, .right{
         width:95vw;
         height:35vh;
@@ -252,7 +258,7 @@ footer{
     .social-media{
         width:70vw;
         height:10vh;
-        margin:1vh 2vw;
+        margin:1vh 8vw;
     }
     .left, .middle, .about-us{
         width:90vw;
@@ -486,10 +492,10 @@ footer{
     }
     @media (min-width:360px) and (max-width:385px){
         footer{
-            height:135vh !important;
+            height:122.5vh !important;
         }
         .hr{
-            margin-top:40vh;
+            margin-top:28vh;
         }
         .about-us p, .middle a, .right a{
             font-size:4.7vw !important;
@@ -498,25 +504,28 @@ footer{
             margin-top:15vh !important;
         }
         .middle{
-            margin-top:12vh !important;
-        }
-        .right{
             margin-top:8vh !important;
         }
-        .instagram, .linkedin, .yt, .facebook{
-            height:7vh !important;
-            width:13vw !important;
-            margin-left:-2vw;
+        .right{
+            margin-top:3vh !important;
         }
-        .instagram img{
-            height:4vh !important;
-            width:8vw !important;
-            margin-left:2.5vw !important;
+        .instagram, .linkedin, .yt, .facebook{
+            height:8vh !important;
+            width:17vw !important;
+            margin-left:1vw;
+            padding:0;
+        }
+        .yt img{
+            height:3.5vh !important;
+            width:12vw !important;
+            margin-left:0.5vw !important;
+            margin-top:0.4vh !important;;
         }
         .linkedin img{
-            height:3vh !important;
-            width:5.5vw !important;
-            margin:1vh 0 0 4vw !important;
+            height:3.5vh !important;
+            width:7.5vw !important;
+            margin-top:1vw !important;
+            margin-left: 0.25vw !important;
         }
     }
     @media (max-width:359px){

@@ -1,6 +1,6 @@
 //Mobile Menu Insertion
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Footer script loaded');
+    console.log('Mobile Menu script loaded');
     
     function loadExternalHTML() {
         fetch('menu.html')
@@ -102,6 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         line.style.backgroundColor = 'black';
                         line.style.color = 'ghostwhite';
                         line.style.borderColor = 'white';
+                        const title = line.querySelector('h1');
+                        if (title) {
+                            title.style.color = 'ghostwhite';
+                        }
                     }
 
 
