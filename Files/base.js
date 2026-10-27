@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                     if (footer) {
-                        footer.style.backgroundColor = 'black';
-                        footer.style.color = 'ghostwhite';
+                        footer.style.backgroundColor = 'white';
+                        footer.style.color = 'black';
                     }
 
                     btns.forEach(btn => {
@@ -205,8 +205,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                     if (footer) {
-                        footer.style.backgroundColor = 'white';
-                        footer.style.color = 'black';
+                        footer.style.backgroundColor = 'black';
+                        footer.style.color = 'ghostwhite';
                     }
 
                     btns.forEach(btn => {
