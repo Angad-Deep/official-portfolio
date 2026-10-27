@@ -254,3 +254,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+function logWindowSize() {
+    console.log(`Width: ${window.innerWidth}, Height: ${window.innerHeight}`);
+}
+logWindowSize();
+window.addEventListener('resize', logWindowSize);

@@ -90,13 +90,7 @@ body {
     text-align: center;
     padding-top:2px;
 }
-.menu{
-    display:none;
-}
-.menu-icon{
-    display:none;
-}
-@media (min-width:320px) and (max-width:749px) {
+@media (min-width:50px) and (max-width:749px) {
     body {
         background-image: url("../Images/Background.jpg");
         background-color: black;
