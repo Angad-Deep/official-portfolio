@@ -21,7 +21,7 @@ footer{
 }
 .social-media{
     display:inline-flex;
-    margin:2vh 2vw;        
+    margin:2vh 5vw;  
 }
 .instagram img{
     height:5vh !important;
@@ -32,15 +32,11 @@ footer{
 .linkedin img{
     height:3.5vh !important;
     width:1.7vw !important;
-    margin-left:13px !important;
-    margin-top:7px !important;
     border-radius:1px !important;
 }
 .yt img{
     height:3.3vh;
     width:2.7vw;
-    margin-left:6px;
-    margin-top:7px;
 }
 .facebook img{
     height:6vh;
@@ -58,9 +54,16 @@ footer{
     width:3.5vw !important;
     background-color: rgb(39, 45, 51);
     display:flex;
+    justify-content: center;
     align-items: center;
-    margin-right:1vw !important;
+    margin-right: 1vw;
     transition: box-shadow 0.3s ease-in-out;
+}
+.instagram img, .linkedin img, .facebook img, .yt img {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
 }
 .hr{
     width:95vw;
