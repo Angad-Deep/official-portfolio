@@ -81,9 +81,6 @@ body {
         background-image: url("../Images/Background.jpg");
         background-color: black;
     }
-    .header {
-        display: none;
-    }
     .pg-title {
         width: 50%;
         height: 50px;
@@ -161,11 +158,5 @@ body {
     }
     .menu a:hover {
         color:rgb(0,196,196);
-    }
-}
-@media (max-width: 1050px) and (min-width: 750px)  and (min-height:1000px) {
-    .header a {
-        font-size:3vw;
-        margin-top:0.5vh !important;
     }
 }

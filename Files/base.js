@@ -53,19 +53,19 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.text())
         .then(data => {
 
-            // Insert header first
+            // INSERT HEADER FIRST
             document.getElementById("header").innerHTML = data;
 
-            // Header elements now exist
+            // Everything that needs the inserted header
+            // MUST be selected AFTER insertion
+            let theme = localStorage.getItem('theme') || 'light';
+
             const darkThemeImg = document.getElementById('dark-theme');
             const lightThemeImg = document.getElementById('light-theme');
+
             const header = document.querySelector('.header');
             const hlinks = document.querySelectorAll('.header a');
 
-            // Initial / Preserved Theme
-            let theme = localStorage.getItem('theme') || 'light';
-
-            // Other page elements
             const line = document.querySelector('.pg-title');
             const footer = document.querySelector('footer');
             const links = document.querySelectorAll('a');
@@ -87,50 +87,59 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.body.style.color = 'ghostwhite';
                     document.body.style.backgroundImage = 'url("../Images/Background.jpg")';
 
+
+                    // Header theme styling
+                    // IMPORTANT: no display property here.
+                    // header.css controls desktop/mobile visibility.
                     if (header) {
                         header.style.backgroundColor = 'black';
                         header.style.boxShadow = 'none';
                         header.style.color = 'ghostwhite';
                     }
 
+
                     if (line) {
                         line.style.backgroundColor = 'black';
                         line.style.color = 'ghostwhite';
                         line.style.borderColor = 'white';
-                        const title = line.querySelector('h1');
-                            if (title) {
-                                title.style.color = 'ghostwhite';
-                    }
                     }
 
+
                     if (footer) {
-                        footer.style.backgroundColor = 'white';
-                        footer.style.color = 'black';
+                        footer.style.backgroundColor = 'black';
+                        footer.style.color = 'ghostwhite';
                     }
+
 
                     btns.forEach(btn => {
                         btn.style.borderColor = 'white';
                     });
+
 
                     if (my) {
                         my.style.borderColor = 'white';
                         my.style.boxShadow = '2px 3px 4px 5px rgb(251, 255, 0)';
                     }
 
+
                     if (achievements) achievements.style.borderColor = 'white';
                     if (achievements) achievements.style.backgroundColor = 'black';
                     if (achievements) achievements.style.color = 'white';
+
 
                     links.forEach(link => {
                         link.style.backgroundColor = 'none';
                         link.style.color = 'whitesmoke';
                     });
 
+
                     headings.forEach(h2 => {
                         h2.style.textDecoration = 'white underline';
                         h2.style.textUnderlineOffset = '5px';
                     });
 
+
+                    // Header links — selected AFTER header insertion
                     hlinks.forEach(hlink => {
 
                         hlink.style.color = "";
@@ -140,13 +149,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         hlink.style.color = "";
 
                         hlink.addEventListener('mouseenter', () => {
-                            hlink.style.backgroundImage = "linear-gradient(135deg, #00f260, #00ffee)";
+                            hlink.style.backgroundImage =
+                                "linear-gradient(135deg, #00f260, #00ffee)";
+
                             hlink.style.webkitBackgroundClip = "text";
                             hlink.style.color = "transparent";
                         });
 
                         hlink.addEventListener('mouseleave', () => {
                             hlink.style.backgroundImage = "";
+                            hlink.style.backgroundClip = "";
+                            hlink.style.webkitBackgroundClip = "";
                             hlink.style.color = "";
                         });
 
@@ -157,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         b.style.color = 'ghostwhite';
                     });
 
+
                     ec.forEach(ec => {
                         ec.style.backgroundColor = "black";
                         ec.style.boxShadow = "2px 3px 10px 6px";
@@ -164,7 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         ec.classList.add('gradient-shadow');
                     });
 
+
                     project.forEach(project => {
+
                         project.style.backgroundColor = "ghostwhite";
                         project.style.filter = "brightness(80%)";
 
@@ -186,52 +202,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 } else {
 
-                    document.body.style.background = "linear-gradient(135deg, #00f260, #00ffee, #fcff5f)";
+                    document.body.style.background =
+                        "linear-gradient(135deg, #00f260, #00ffee, #fcff5f)";
+
                     document.body.style.color = 'black';
 
+
+                    // Header theme styling
+                    // IMPORTANT: no display property here.
+                    // header.css controls desktop/mobile visibility.
                     if (header) {
                         header.style.backgroundColor = 'white';
-                        header.style.boxShadow = '2vw 3vw 1vw -4.5vh whitesmoke';
+                        header.style.boxShadow =
+                            '2vw 3vw 1vw -4.5vh whitesmoke';
                     }
+
 
                     if (line) {
                         line.style.backgroundColor = 'white';
                         line.style.color = 'black';
                         line.style.borderColor = 'black';
-                        const title = line.querySelector('h1');
-                        if (title) {
-                            title.style.color = 'black';
-                        }
                     }
 
+
                     if (footer) {
-                        footer.style.backgroundColor = 'black';
-                        footer.style.color = 'ghostwhite';
+                        footer.style.backgroundColor = 'white';
+                        footer.style.color = 'black';
                     }
+
 
                     btns.forEach(btn => {
                         btn.style.borderColor = 'black';
                     });
 
+
                     if (my) {
                         my.style.borderColor = 'black';
-                        my.style.boxShadow = '2px 3px 4px 5px rgba(0, 204, 204, 0.4)';
+                        my.style.boxShadow =
+                            '2px 3px 4px 5px rgba(0, 204, 204, 0.4)';
                     }
+
 
                     if (achievements) achievements.style.borderColor = 'black';
                     if (achievements) achievements.style.backgroundColor = 'white';
                     if (achievements) achievements.style.color = 'black';
+
 
                     links.forEach(link => {
                         link.style.color = 'black';
                         link.style.textDecoration = 'none';
                     });
 
+
                     headings.forEach(h2 => {
                         h2.style.textDecoration = 'black underline';
                         h2.style.textUnderlineOffset = '5px';
                     });
 
+
+                    // Header links — selected AFTER header insertion
                     hlinks.forEach(hlink => {
 
                         hlink.style.color = "black";
@@ -240,13 +269,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         hlink.style.webkitBackgroundClip = "";
 
                         hlink.addEventListener('mouseenter', () => {
-                            hlink.style.backgroundImage = "linear-gradient(135deg, #12c2e9, #c471ed, #f64f59)";
+
+                            hlink.style.backgroundImage =
+                                "linear-gradient(135deg, #12c2e9, #c471ed, #f64f59)";
+
                             hlink.style.webkitBackgroundClip = "text";
                             hlink.style.color = "transparent";
                         });
 
                         hlink.addEventListener('mouseleave', () => {
+
                             hlink.style.backgroundImage = "";
+                            hlink.style.backgroundClip = "";
+                            hlink.style.webkitBackgroundClip = "";
                             hlink.style.color = "black";
                         });
 
@@ -257,13 +292,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         b.style.color = 'black';
                     });
 
+
                     ec.forEach(ec => {
                         ec.style.backgroundColor = "";
                         ec.style.boxShadow = "";
                         ec.classList.add('gradient-shadow');
                     });
 
+
                     project.forEach(project => {
+
                         project.style.backgroundColor = "";
                         project.style.filter = "";
 
@@ -286,15 +324,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
 
-            // Apply saved theme AFTER header has loaded
+            // Apply saved theme AFTER header has been inserted
             applyTheme();
 
 
             // Dark theme button -> switch to light
             if (darkThemeImg) {
                 darkThemeImg.addEventListener('click', function () {
+
                     theme = 'light';
+
                     localStorage.setItem('theme', theme);
+
                     applyTheme();
                 });
             }
@@ -303,8 +344,11 @@ document.addEventListener('DOMContentLoaded', function () {
             // Light theme button -> switch to dark
             if (lightThemeImg) {
                 lightThemeImg.addEventListener('click', function () {
+
                     theme = 'dark';
+
                     localStorage.setItem('theme', theme);
+
                     applyTheme();
                 });
             }
@@ -318,6 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function logWindowSize() {
     console.log(`Width: ${window.innerWidth}, Height: ${window.innerHeight}`);
 }
+
 
 logWindowSize();
 

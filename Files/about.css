@@ -82,10 +82,6 @@ p:not(footer p) a {
     padding-right: 25px;
 }
 
-.header a:hover {
-    color: yellow;
-}
-
 .gradient-shadow {
     position: relative;
     z-index: 1; /* Ensures the main content stays above the shadow */

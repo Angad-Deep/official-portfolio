@@ -16,3 +16,14 @@
     margin-right: 50px; 
     color: whitesmoke;
 }
+@media (min-width:50px) and (max-width:749px) {
+    .header {
+        display: none;
+    }
+}
+@media (max-width: 1050px) and (min-width: 750px)  and (min-height:1000px) {
+    .header a {
+        font-size:3vw;
+        margin-top:0.5vh !important;
+    }
+}
